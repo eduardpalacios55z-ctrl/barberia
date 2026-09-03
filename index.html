@@ -1,38 +1,842 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbería | Estilo y Calidad</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Barbería | Estilo que se nota</title>
+
+  <meta name="description" content="Barbería profesional. Cortes, barba y estilo para caballeros.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+    }
+
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #c89b3c;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #c89b3c;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 60px;
+
+      background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.78)),
+        url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1600&q=85");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 85px);
+      line-height: 1;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 span {
+      color: #c89b3c;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #ddd;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #c89b3c;
+      color: #000;
+      padding: 15px 28px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #e0b85a;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #c89b3c;
+      color: #fff;
+    }
+
+    /* SECCIONES */
+
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title small {
+      color: #c89b3c;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: #aaa;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    /* SERVICIOS */
+
+    .services {
+      background: #111;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service {
+      background: #181818;
+      border: 1px solid #292929;
+      padding: 35px 25px;
+      text-align: center;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+      border-color: #c89b3c;
+    }
+
+    .service-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .service p {
+      color: #aaa;
+      margin-bottom: 18px;
+    }
+
+    .price {
+      color: #c89b3c;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    /* SOBRE NOSOTROS */
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .about-text h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      list-style: none;
+    }
+
+    .features li {
+      margin: 12px 0;
+      color: #ddd;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: #c89b3c;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* GALERÍA */
+
+    .gallery {
+      background: #111;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      filter: brightness(1.15);
+    }
+
+    /* OPINIONES */
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .review {
+      background: #151515;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #252525;
+    }
+
+    .stars {
+      color: #c89b3c;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .review p {
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    .review strong {
+      color: white;
+    }
+
+    /* RESERVA */
+
+    .booking {
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=85");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .booking h2 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .booking p {
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    /* CONTACTO */
+
+    .contact {
+      background: #111;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .contact-box {
+      padding: 30px;
+      background: #181818;
+      border-radius: 10px;
+    }
+
+    .contact-box h3 {
+      color: #c89b3c;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      color: #aaa;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #050505;
+      color: #777;
+      border-top: 1px solid #222;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      z-index: 999;
+      box-shadow: 0 5px 20px rgba(0,0,0,.4);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 800px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .service-grid,
+      .reviews-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .about img {
+        height: 320px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .booking h2 {
+        font-size: 35px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <h1>💈 Barbería</h1>
+  <!-- MENÚ -->
 
-    <h2>Tu estilo, nuestra pasión</h2>
+  <header>
+    <nav>
+      <div class="logo">BARBER<span>ÍA</span></div>
+
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- INICIO -->
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+      <h1>Tu estilo.<br><span>Nuestra pasión.</span></h1>
+
+      <p>
+        Cortes modernos, barba y estilo profesional
+        para hombres que quieren verse y sentirse bien.
+      </p>
+
+      <a href="#servicios" class="btn">Ver servicios</a>
+
+      <a href="#reserva" class="btn btn-outline">Reservar cita</a>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICIOS -->
+
+  <section class="services" id="servicios">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <small>Nuestros servicios</small>
+
+        <h2>Elige tu estilo</h2>
+
+        <p>
+          Todo lo que necesitas para salir de la barbería
+          con un look impecable.
+        </p>
+
+      </div>
+
+
+      <div class="service-grid">
+
+        <div class="service">
+
+          <div class="service-icon">✂️</div>
+
+          <h3>Corte de cabello</h3>
+
+          <p>
+            Cortes clásicos y modernos adaptados
+            a tu estilo.
+          </p>
+
+          <div class="price">$150</div>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-icon">🧔</div>
+
+          <h3>Barba</h3>
+
+          <p>
+            Perfilado y arreglo profesional
+            para una barba impecable.
+          </p>
+
+          <div class="price">$100</div>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-icon">🔥</div>
+
+          <h3>Corte + Barba</h3>
+
+          <p>
+            La combinación perfecta para renovar
+            completamente tu imagen.
+          </p>
+
+          <div class="price">$220</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- NOSOTROS -->
+
+  <section id="nosotros">
+
+    <div class="container">
+
+      <div class="about">
+
+        <img
+          src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1000&q=85"
+          alt="Barbero trabajando"
+        >
+
+        <div class="about-text">
+
+          <h2>Más que una barbería</h2>
+
+          <p>
+            Creamos una experiencia donde cada detalle
+            importa. Nuestro objetivo es que cada cliente
+            salga satisfecho con su estilo.
+          </p>
+
+          <p>
+            Trabajamos con dedicación, atención al detalle
+            y las tendencias actuales de barbería.
+          </p>
+
+          <ul class="features">
+
+            <li>Barberos profesionales</li>
+
+            <li>Atención personalizada</li>
+
+            <li>Productos de calidad</li>
+
+            <li>Ambiente cómodo</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALERÍA -->
+
+  <section class="gallery" id="galeria">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <small>Nuestro trabajo</small>
+
+        <h2>Galería</h2>
+
+        <p>
+          Algunos estilos que puedes encontrar
+          en nuestra barbería.
+        </p>
+
+      </div>
+
+
+      <div class="gallery-grid">
+
+        <img
+          src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=85"
+          alt="Corte de cabello"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=85"
+          alt="Barbero"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=85"
+          alt="Barbería"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?auto=format&fit=crop&w=800&q=85"
+          alt="Corte masculino"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?auto=format&fit=crop&w=800&q=85"
+          alt="Estilo masculino"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=85"
+          alt="Barbería profesional"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- OPINIONES -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <small>Clientes felices</small>
+
+        <h2>Lo que dicen de nosotros</h2>
+
+      </div>
+
+
+      <div class="reviews-grid">
+
+        <div class="review">
+
+          <div class="stars">★★★★★</div>
+
+          <p>
+            "Excelente servicio. Me dejaron el corte
+            exactamente como lo quería."
+          </p>
+
+          <strong>— Cliente satisfecho</strong>
+
+        </div>
+
+
+        <div class="review">
+
+          <div class="stars">★★★★★</div>
+
+          <p>
+            "Muy buen ambiente y excelente atención.
+            Definitivamente volveré."
+          </p>
+
+          <strong>— Cliente satisfecho</strong>
+
+        </div>
+
+
+        <div class="review">
+
+          <div class="stars">★★★★★</div>
+
+          <p>
+            "Buen trabajo, buen servicio y muy buenos
+            resultados."
+          </p>
+
+          <strong>— Cliente satisfecho</strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESERVA -->
+
+  <section class="booking" id="reserva">
+
+    <div class="container">
+
+      <h2>¿Listo para tu próximo corte?</h2>
+
+      <p>
+        Reserva tu cita y déjanos encargarnos del resto.
+      </p>
+
+      <!-- CAMBIA EL NÚMERO POR EL DE LA BARBERÍA -->
+
+      <a
+        class="btn"
+        href="https://wa.me/524331130292?text=Hola,%20quiero%20reservar%20una%20cita"
+        target="_blank"
+      >
+        Reservar por WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTO -->
+
+  <section class="contact" id="contacto">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <small>Encuéntranos</small>
+
+        <h2>Contacto</h2>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+        <div class="contact-box">
+
+          <h3>📍 Ubicación</h3>
+
+          <p>
+            Agrega aquí la dirección de la barbería.
+          </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+          <h3>📞 Teléfono</h3>
+
+          <p>
+            Agrega aquí el teléfono.
+          </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+          <h3>🕐 Horario</h3>
+
+          <p>
+            Lunes - Sábado<br>
+            9:00 AM - 8:00 PM
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
 
     <p>
-        Bienvenido a nuestra barbería. 
-        Ofrecemos cortes modernos, clásicos y un servicio profesional.
+      © 2026 Barbería. Todos los derechos reservados.
     </p>
 
-    <h2>Nuestros servicios</h2>
+  </footer>
 
-    <ul>
-        <li>Corte de cabello</li>
-        <li>Barba</li>
-        <li>Corte + barba</li>
-        <li>Diseños</li>
-    </ul>
 
-    <h2>Agenda tu cita</h2>
+  <!-- BOTÓN WHATSAPP -->
 
-    <p>Reserva tu cita fácilmente por WhatsApp.</p>
-
-    <a href="https://wa.me/5210000000000">
-        Reservar por WhatsApp
-    </a>
+  <a
+    class="whatsapp"
+    href="https://wa.me/524331130292?text=Hola,%20quiero%20reservar%20una%20cita"
+    target="_blank"
+    aria-label="WhatsApp"
+  >
+    ☎
+  </a>
 
 </body>
 </html>

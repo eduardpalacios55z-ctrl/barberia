@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mariscos Mares | Sombrerete, Zacatecas</title>
+<title>Barbería | Estilo y personalidad</title>
 
-<meta name="description"
-content="Mariscos Mares en Sombrerete, Zacatecas. Ceviches, cocteles, tostadas, aguachiles, pescado y mariscos.">
+<meta name="description" content="Barbería profesional. Cortes de cabello, barba y estilo. Agenda tu cita por WhatsApp.">
 
 <style>
 
@@ -23,7 +22,7 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#071114;
+    background:#080808;
     color:white;
     line-height:1.6;
 }
@@ -39,7 +38,7 @@ img{
 }
 
 /* =========================
-   HEADER
+   NAVEGACIÓN
 ========================= */
 
 header{
@@ -48,29 +47,28 @@ header{
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(3,15,18,.92);
+    background:rgba(0,0,0,.88);
     backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid #222;
 }
 
 nav{
     max-width:1200px;
     margin:auto;
     padding:18px 25px;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
 .logo{
-    font-size:25px;
-    font-weight:800;
+    font-size:24px;
+    font-weight:bold;
     letter-spacing:2px;
 }
 
 .logo span{
-    color:#16c7d9;
+    color:#d4af37;
 }
 
 .nav-links{
@@ -86,95 +84,68 @@ nav{
 }
 
 .nav-links a:hover{
-    color:#16c7d9;
+    color:#d4af37;
 }
 
-
 /* =========================
-   HERO
+   INICIO
 ========================= */
 
 .hero{
-
     min-height:100vh;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
-
-    padding:110px 20px 60px;
+    padding:100px 20px 50px;
 
     background:
-    linear-gradient(
-        rgba(0,10,14,.55),
-        rgba(0,8,12,.88)
-    ),
-
-    url("https://escapetomexico.com/wp-content/uploads/2020/10/mariscos-mares-ok.jpg")
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.78)),
+    url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=90")
     center/cover;
 }
 
 .hero-content{
-    max-width:850px;
-}
-
-.hero small{
-    color:#16c7d9;
-    font-weight:bold;
-    letter-spacing:4px;
-    text-transform:uppercase;
+    max-width:800px;
 }
 
 .hero h1{
-    font-size:clamp(50px,9vw,90px);
+    font-size:clamp(48px,8vw,85px);
     line-height:1;
-    margin:20px 0;
+    margin-bottom:25px;
+    letter-spacing:-2px;
 }
 
 .hero h1 span{
-    color:#16c7d9;
+    color:#d4af37;
 }
 
 .hero p{
-    color:#ddd;
     font-size:20px;
+    color:#ddd;
     margin-bottom:35px;
 }
 
 .btn{
     display:inline-block;
     padding:15px 30px;
-    border-radius:5px;
+    border-radius:4px;
     font-weight:bold;
     transition:.3s;
 }
 
-.btn-primary{
-    background:#16c7d9;
-    color:#031013;
+.btn-gold{
+    background:#d4af37;
+    color:#111;
 }
 
-.btn-primary:hover{
+.btn-gold:hover{
     transform:translateY(-3px);
-    box-shadow:0 10px 30px rgba(22,199,217,.25);
+    box-shadow:0 10px 30px rgba(212,175,55,.25);
 }
-
-.btn-outline{
-    border:1px solid #16c7d9;
-    color:#16c7d9;
-    margin-left:10px;
-}
-
-.btn-outline:hover{
-    background:#16c7d9;
-    color:#031013;
-}
-
 
 /* =========================
-   GENERAL
+   SECCIONES
 ========================= */
 
 section{
@@ -192,88 +163,146 @@ section{
 }
 
 .section-title small{
-    color:#16c7d9;
-    letter-spacing:3px;
+    color:#d4af37;
     text-transform:uppercase;
+    letter-spacing:3px;
     font-weight:bold;
 }
 
 .section-title h2{
-    font-size:43px;
+    font-size:42px;
     margin-top:10px;
 }
 
 .section-title p{
-    color:#9eafb3;
+    color:#999;
     max-width:650px;
     margin:15px auto 0;
 }
 
-
 /* =========================
-   ESPECIALIDADES
+   SERVICIOS
 ========================= */
 
-#especialidades{
-    background:#0b1b1f;
+#servicios{
+    background:#111;
 }
 
-.cards{
+.services-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
 
-.card{
-    background:#102328;
-    border:1px solid #1b373d;
+.service-card{
+    background:#181818;
+    border:1px solid #292929;
     overflow:hidden;
     transition:.4s;
 }
 
-.card:hover{
+.service-card:hover{
     transform:translateY(-8px);
-    border-color:#16c7d9;
+    border-color:#d4af37;
 }
 
-.card-image{
-    height:270px;
+.service-image{
+    height:300px;
     overflow:hidden;
 }
 
-.card-image img{
+.service-image img{
     height:100%;
     object-fit:cover;
     transition:.5s;
 }
 
-.card:hover img{
+.service-card:hover img{
     transform:scale(1.06);
 }
 
-.card-content{
-    padding:27px;
+.service-content{
+    padding:28px;
 }
 
-.card-content h3{
-    font-size:23px;
+.service-content h3{
+    font-size:24px;
     margin-bottom:10px;
 }
 
-.card-content p{
-    color:#9eafb3;
+.service-content p{
+    color:#aaa;
 }
 
+/* =========================
+   CORTE + BARBA / VIDEO
+========================= */
+
+.experience{
+    background:#080808;
+}
+
+.experience-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.video-box{
+    overflow:hidden;
+    border-radius:8px;
+    border:1px solid #292929;
+    background:#111;
+}
+
+.video-box video{
+    width:100%;
+    display:block;
+    aspect-ratio:16/10;
+    object-fit:cover;
+}
+
+.experience-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.experience-text h2 span{
+    color:#d4af37;
+}
+
+.experience-text p{
+    color:#aaa;
+    margin-bottom:18px;
+}
+
+.features{
+    list-style:none;
+    margin:25px 0;
+}
+
+.features li{
+    margin-bottom:12px;
+    color:#ddd;
+}
+
+.features li::before{
+    content:"✓";
+    color:#d4af37;
+    font-weight:bold;
+    margin-right:10px;
+}
 
 /* =========================
-   SOBRE NOSOTROS
+   NOSOTROS
 ========================= */
 
 #nosotros{
-    background:#071114;
+    background:#111;
 }
 
-.about{
+.about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:60px;
@@ -281,9 +310,8 @@ section{
 }
 
 .about-image{
-    height:500px;
+    height:520px;
     overflow:hidden;
-    border-radius:8px;
 }
 
 .about-image img{
@@ -292,75 +320,49 @@ section{
 }
 
 .about-text h2{
-    font-size:45px;
-    line-height:1.1;
-    margin:12px 0 25px;
+    font-size:44px;
+    margin:10px 0 20px;
 }
 
 .about-text h2 span{
-    color:#16c7d9;
+    color:#d4af37;
 }
 
 .about-text p{
-    color:#a9b7ba;
+    color:#aaa;
     margin-bottom:18px;
 }
 
-
-/* =========================
-   MENÚ
-========================= */
-
-#menu{
-    background:#0b1b1f;
-}
-
-.menu-grid{
+.about-boxes{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:25px;
+    gap:15px;
+    margin-top:30px;
 }
 
-.menu-box{
-    background:#102328;
-    padding:30px;
-    border:1px solid #1b373d;
+.about-box{
+    padding:20px;
+    background:#181818;
+    border-left:3px solid #d4af37;
 }
 
-.menu-box h3{
-    color:#16c7d9;
-    font-size:25px;
-    margin-bottom:20px;
+.about-box strong{
+    display:block;
+    font-size:18px;
+    margin-bottom:5px;
 }
 
-.menu-item{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    padding:13px 0;
-    border-bottom:1px solid #254047;
+.about-box span{
+    color:#999;
+    font-size:14px;
 }
-
-.menu-item:last-child{
-    border-bottom:none;
-}
-
-.menu-item span:first-child{
-    color:#eee;
-}
-
-.menu-item span:last-child{
-    color:#16c7d9;
-    font-weight:bold;
-}
-
 
 /* =========================
    GALERÍA
 ========================= */
 
 #galeria{
-    background:#071114;
+    background:#080808;
 }
 
 .gallery{
@@ -370,7 +372,7 @@ section{
 }
 
 .gallery-item{
-    height:320px;
+    height:330px;
     overflow:hidden;
     border-radius:5px;
 }
@@ -385,70 +387,21 @@ section{
     transform:scale(1.08);
 }
 
-
-/* =========================
-   UBICACIÓN
-========================= */
-
-#ubicacion{
-    background:#0b1b1f;
-}
-
-.location{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.location-info{
-    padding:35px;
-    background:#102328;
-    border:1px solid #1b373d;
-}
-
-.location-info h3{
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-.location-info p{
-    color:#a9b7ba;
-    margin-bottom:15px;
-}
-
-.map{
-    min-height:350px;
-    background:#162c31;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:30px;
-    color:#8fa2a6;
-}
-
-
 /* =========================
    CONTACTO
 ========================= */
 
 #contacto{
-
-    text-align:center;
-
     background:
-    linear-gradient(
-        rgba(0,8,12,.85),
-        rgba(0,8,12,.95)
-    ),
-
-    url("https://escapetomexico.com/wp-content/uploads/2020/10/mariscos-mares-ok.jpg")
+    linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.92)),
+    url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1800&q=90")
     center/cover;
 }
 
 .contact-box{
-    max-width:800px;
+    max-width:850px;
     margin:auto;
+    text-align:center;
 }
 
 .contact-box h2{
@@ -457,12 +410,14 @@ section{
 }
 
 .contact-box p{
-    color:#b5c2c5;
+    color:#bbb;
     margin-bottom:30px;
 }
 
-.whatsapp{
-    display:inline-block;
+.whatsapp-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
     background:#25D366;
     color:white;
     padding:17px 30px;
@@ -471,28 +426,32 @@ section{
     transition:.3s;
 }
 
-.whatsapp:hover{
+.whatsapp-btn:hover{
     transform:translateY(-3px);
     box-shadow:0 10px 30px rgba(37,211,102,.25);
 }
 
+.phone{
+    margin-top:20px;
+    color:#ddd;
+    font-size:17px;
+}
 
 /* =========================
    FOOTER
 ========================= */
 
 footer{
-    background:#03090b;
+    background:#050505;
     padding:35px 20px;
     text-align:center;
-    border-top:1px solid #16272b;
+    border-top:1px solid #222;
 }
 
 footer p{
-    color:#718084;
+    color:#777;
     font-size:14px;
 }
-
 
 /* =========================
    CELULAR
@@ -508,34 +467,29 @@ footer p{
         padding:75px 18px;
     }
 
-    .cards,
-    .gallery,
-    .menu-grid,
-    .location,
-    .about{
+    .services-grid,
+    .gallery{
         grid-template-columns:1fr;
     }
 
-    .hero h1{
-        font-size:55px;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    .btn-outline{
-        margin-left:0;
-        margin-top:10px;
-    }
-
-    .section-title h2,
-    .about-text h2{
-        font-size:35px;
+    .experience-grid,
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:35px;
     }
 
     .about-image{
-        height:380px;
+        height:400px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .section-title h2,
+    .experience-text h2,
+    .about-text h2{
+        font-size:34px;
     }
 
     .gallery-item{
@@ -547,12 +501,10 @@ footer p{
 </style>
 </head>
 
-
 <body>
 
-
 <!-- =========================
-     NAV
+     MENÚ
 ========================= -->
 
 <header>
@@ -560,15 +512,14 @@ footer p{
 <nav>
 
 <div class="logo">
-MARISCOS <span>MARES</span>
+BARBER<span>ÍA</span>
 </div>
 
 <ul class="nav-links">
 
 <li><a href="#inicio">Inicio</a></li>
-<li><a href="#especialidades">Especialidades</a></li>
+<li><a href="#servicios">Servicios</a></li>
 <li><a href="#nosotros">Nosotros</a></li>
-<li><a href="#menu">Menú</a></li>
 <li><a href="#galeria">Galería</a></li>
 <li><a href="#contacto">Contacto</a></li>
 
@@ -587,26 +538,17 @@ MARISCOS <span>MARES</span>
 
 <div class="hero-content">
 
-<small>
-Sabor del mar en Sombrerete
-</small>
-
 <h1>
-MARISCOS<br>
-<span>MARES</span>
+TU ESTILO.<br>
+<span>TU BARBERÍA.</span>
 </h1>
 
 <p>
-Pescados y mariscos preparados para disfrutar
-en compañía de familia y amigos.
+Cortes, barba y estilo profesional adaptados a ti.
 </p>
 
-<a href="#menu" class="btn btn-primary">
-Ver menú
-</a>
-
-<a href="#contacto" class="btn btn-outline">
-Contactar
+<a href="#servicios" class="btn btn-gold">
+Ver servicios
 </a>
 
 </div>
@@ -615,101 +557,175 @@ Contactar
 
 
 <!-- =========================
-     ESPECIALIDADES
+     SERVICIOS
 ========================= -->
 
-<section id="especialidades">
+<section id="servicios">
 
 <div class="container">
 
 <div class="section-title">
 
-<small>Lo que puedes disfrutar</small>
+<small>Lo que hacemos</small>
 
-<h2>Especialidades</h2>
+<h2>Nuestros servicios</h2>
 
 <p>
-Una selección de los platillos que aparecen asociados
-con Mariscos Mares en sus menús públicos.
+Cuidamos cada detalle para que salgas con un estilo
+que realmente vaya contigo.
 </p>
 
 </div>
 
 
-<div class="cards">
+<div class="services-grid">
 
 
-<div class="card">
+<!-- CORTE -->
 
-<div class="card-image">
+<article class="service-card">
+
+<div class="service-image">
 
 <img
-src="https://escapetomexico.com/wp-content/uploads/2020/10/mariscos-mares-ok.jpg"
-alt="Platillo de mariscos de Mariscos Mares">
+src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=90"
+alt="Corte de cabello profesional">
 
 </div>
 
-<div class="card-content">
+<div class="service-content">
 
-<h3>Mariscos</h3>
+<h3>Corte de cabello</h3>
 
 <p>
-Combinaciones de pescados y mariscos preparados
-para disfrutar de diferentes sabores y texturas.
+Cortes clásicos y modernos adaptados a tu estilo,
+rostro y personalidad.
 </p>
 
 </div>
 
-</div>
+</article>
 
 
-<div class="card">
+<!-- BARBA -->
 
-<div class="card-image">
+<article class="service-card">
+
+<div class="service-image">
 
 <img
-src="https://escapetomexico.com/wp-content/uploads/2020/10/mariscos-mares-ok.jpg"
-alt="Camarones y pescado">
+src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=90"
+alt="Arreglo profesional de barba">
 
 </div>
 
-<div class="card-content">
+<div class="service-content">
 
-<h3>Pescado</h3>
+<h3>Barba</h3>
 
 <p>
-Filetes y diferentes preparaciones de pescado
-para disfrutar en el restaurante.
+Perfilado, definición y cuidado de barba para
+conseguir un acabado limpio y elegante.
 </p>
 
 </div>
 
-</div>
+</article>
 
 
-<div class="card">
+<!-- CORTE + BARBA -->
 
-<div class="card-image">
+<article class="service-card">
+
+<div class="service-image">
 
 <img
-src="https://escapetomexico.com/wp-content/uploads/2020/10/mariscos-mares-ok.jpg"
-alt="Platillo de mariscos">
+src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=90"
+alt="Servicio de corte y barba">
 
 </div>
 
-<div class="card-content">
+<div class="service-content">
 
-<h3>Ceviches y cocteles</h3>
+<h3>Corte + Barba</h3>
 
 <p>
-Ceviches, cocteles y otras opciones frescas
-del menú.
+El servicio completo para renovar tu imagen y
+salir con un look totalmente cuidado.
 </p>
 
 </div>
 
+</article>
+
+
 </div>
 
+</div>
+
+</section>
+
+
+<!-- =========================
+     VIDEO
+========================= -->
+
+<section class="experience">
+
+<div class="container">
+
+<div class="experience-grid">
+
+
+<div class="video-box">
+
+<video
+autoplay
+muted
+loop
+playsinline
+poster="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=90">
+
+<source src="video-barberia.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+
+<div class="experience-text">
+
+<h2>
+Más que un corte,
+<span>una experiencia.</span>
+</h2>
+
+<p>
+Nos enfocamos en ofrecer una experiencia de barbería
+donde cada detalle cuenta.
+</p>
+
+<p>
+Desde el primer contacto hasta el resultado final,
+buscamos que te sientas cómodo y satisfecho con
+tu nuevo estilo.
+</p>
+
+<ul class="features">
+
+<li>Atención personalizada</li>
+<li>Cortes clásicos y modernos</li>
+<li>Arreglo profesional de barba</li>
+<li>Ambiente cómodo y agradable</li>
+<li>Detalles cuidados en cada servicio</li>
+
+</ul>
+
+<a href="#contacto" class="btn btn-gold">
+Agendar cita
+</a>
+
+</div>
 
 </div>
 
@@ -726,193 +742,71 @@ del menú.
 
 <div class="container">
 
-<div class="about">
+<div class="about-grid">
 
 
 <div class="about-image">
 
 <img
-src="https://escapetomexico.com/wp-content/uploads/2020/10/mariscos-mares-ok.jpg"
-alt="Platillo de Mariscos Mares">
+src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=90"
+alt="Interior de barbería profesional">
 
 </div>
 
 
 <div class="about-text">
 
-<small style="color:#16c7d9;letter-spacing:3px;">
-MARISCOS MARES
+<small style="color:#d4af37;letter-spacing:3px;">
+CONÓCENOS
 </small>
 
 <h2>
-El sabor del mar
-<span>en Sombrerete.</span>
+Tu imagen merece
+<span>el mejor cuidado.</span>
 </h2>
 
 <p>
-Mariscos Mares es un restaurante de pescados y mariscos
-ubicado en Sombrerete, Zacatecas.
+Somos una barbería enfocada en ofrecer cortes de cabello
+y servicios de barba con atención personalizada.
 </p>
 
 <p>
-Su oferta pública incluye opciones como tostadas,
-ceviches, cocteles, aguachiles, pescado, filetes
-y diferentes preparaciones de mariscos.
+Combinamos técnicas clásicas con estilos modernos para
+crear un resultado que se adapte realmente a cada cliente.
 </p>
 
 <p>
-La idea de esta página es presentar el restaurante
-de una manera moderna, facilitar que los clientes
-conozcan el menú y hacer más sencillo el contacto.
+Nuestro objetivo no es solamente cortar el cabello:
+queremos que cada persona salga sintiéndose segura
+con su imagen.
 </p>
 
+
+<div class="about-boxes">
+
+<div class="about-box">
+<strong>Estilo</strong>
+<span>Cortes adaptados a ti.</span>
+</div>
+
+<div class="about-box">
+<strong>Calidad</strong>
+<span>Atención a cada detalle.</span>
+</div>
+
+<div class="about-box">
+<strong>Experiencia</strong>
+<span>Servicio profesional.</span>
+</div>
+
+<div class="about-box">
+<strong>Confianza</strong>
+<span>Tu imagen en buenas manos.</span>
 </div>
 
 </div>
 
 </div>
-
-</section>
-
-
-<!-- =========================
-     MENÚ
-========================= -->
-
-<section id="menu">
-
-<div class="container">
-
-<div class="section-title">
-
-<small>Conoce nuestra carta</small>
-
-<h2>Menú</h2>
-
-<p>
-Algunos ejemplos encontrados en el menú público.
-Los precios deberán confirmarse con el negocio antes
-de publicar la versión definitiva.
-</p>
-
-</div>
-
-
-<div class="menu-grid">
-
-
-<div class="menu-box">
-
-<h3>🥑 Tostadas</h3>
-
-<div class="menu-item">
-<span>Ceviche</span>
-<span>$26</span>
-</div>
-
-<div class="menu-item">
-<span>Ceviche con camarón</span>
-<span>$48</span>
-</div>
-
-<div class="menu-item">
-<span>Ceviche con pulpo</span>
-<span>$50</span>
-</div>
-
-<div class="menu-item">
-<span>Camarón</span>
-<span>$42</span>
-</div>
-
-<div class="menu-item">
-<span>Aguachile</span>
-<span>$68</span>
-</div>
-
-</div>
-
-
-<div class="menu-box">
-
-<h3>🍤 Cocteles</h3>
-
-<div class="menu-item">
-<span>Camarón</span>
-<span>Desde $70</span>
-</div>
-
-<div class="menu-item">
-<span>Campechana</span>
-<span>Desde $88</span>
-</div>
-
-<div class="menu-item">
-<span>Campechana súper</span>
-<span>Desde $110</span>
-</div>
-
-<div class="menu-item">
-<span>Aguachile</span>
-<span>Desde $85</span>
-</div>
-
-<div class="menu-item">
-<span>Aguachile súper</span>
-<span>Desde $135</span>
-</div>
-
-</div>
-
-
-<div class="menu-box">
-
-<h3>🐟 Pescados</h3>
-
-<div class="menu-item">
-<span>Pescado</span>
-<span>Consultar</span>
-</div>
-
-<div class="menu-item">
-<span>Filetes</span>
-<span>Consultar</span>
-</div>
-
-<div class="menu-item">
-<span>Pescado empanizado</span>
-<span>Consultar</span>
-</div>
-
-</div>
-
-
-<div class="menu-box">
-
-<h3>🥤 Bebidas</h3>
-
-<div class="menu-item">
-<span>Refresco</span>
-<span>Consultar</span>
-</div>
-
-<div class="menu-item">
-<span>Café</span>
-<span>Consultar</span>
-</div>
-
-<div class="menu-item">
-<span>Limonada</span>
-<span>Consultar</span>
-</div>
-
-<div class="menu-item">
-<span>Agua fresca</span>
-<span>Consultar</span>
-</div>
-
-</div>
-
 
 </div>
 
@@ -931,13 +825,12 @@ de publicar la versión definitiva.
 
 <div class="section-title">
 
-<small>Conoce nuestros platillos</small>
+<small>Nuestro trabajo</small>
 
 <h2>Galería</h2>
 
 <p>
-Fotografías disponibles públicamente del restaurante
-y sus platillos.
+Conoce nuestro estilo y el ambiente de nuestra barbería.
 </p>
 
 </div>
@@ -947,91 +840,44 @@ y sus platillos.
 
 
 <div class="gallery-item">
-
 <img
-src="https://escapetomexico.com/wp-content/uploads/2020/10/mariscos-mares-ok.jpg"
-alt="Platillo de Mariscos Mares">
-
+src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?auto=format&fit=crop&w=900&q=90"
+alt="Corte masculino">
 </div>
 
 
 <div class="gallery-item">
-
 <img
-src="https://escapetomexico.com/wp-content/uploads/2020/10/mariscos-mares-ok.jpg"
-alt="Mariscos">
-
+src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=900&q=90"
+alt="Barbería">
 </div>
 
 
 <div class="gallery-item">
-
 <img
-src="https://escapetomexico.com/wp-content/uploads/2020/10/mariscos-mares-ok.jpg"
-alt="Pescado y camarones">
-
+src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=90"
+alt="Barbero realizando corte">
 </div>
 
 
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     UBICACIÓN
-========================= -->
-
-<section id="ubicacion">
-
-<div class="container">
-
-<div class="section-title">
-
-<small>Encuéntranos</small>
-
-<h2>Ubicación</h2>
-
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=900&q=90"
+alt="Herramientas de barbería">
 </div>
 
 
-<div class="location">
-
-
-<div class="location-info">
-
-<h3>Mariscos Mares</h3>
-
-<p>
-📍 Sombrerete, Zacatecas
-</p>
-
-<p>
-📍 Dirección: <strong>CONFIRMAR CON EL CLIENTE</strong>
-</p>
-
-<p>
-📞 Teléfono: <strong>CONFIRMAR CON EL CLIENTE</strong>
-</p>
-
-<br>
-
-<a href="#contacto" class="btn btn-primary">
-Quiero contactar
-</a>
-
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=90"
+alt="Corte y barba">
 </div>
 
 
-<div class="map">
-
-<p>
-Aquí colocaremos el mapa exacto de Google Maps
-cuando confirmemos la ubicación correcta del negocio.
-</p>
-
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=90"
+alt="Interior de barbería">
 </div>
 
 
@@ -1054,40 +900,34 @@ cuando confirmemos la ubicación correcta del negocio.
 
 <div class="section-title">
 
-<small>Contáctanos</small>
+<small>Reserva tu cita</small>
 
-<h2>
-¿Se te antojaron unos mariscos?
-</h2>
+<h2>¿Listo para tu próximo corte?</h2>
 
 <p>
-Contáctanos para conocer el menú, horarios,
-ubicación y disponibilidad.
+Escríbenos directamente por WhatsApp y agenda
+tu cita de manera rápida y sencilla.
 </p>
 
 </div>
 
 
-<!--
-IMPORTANTE:
-
-NO PONGO UN WHATSAPP INVENTADO.
-CUANDO EL CLIENTE CONFIRME SU NÚMERO,
-LO PONEMOS AQUÍ.
-
-Ejemplo:
-
-https://wa.me/524339356335
--->
-
 <a
-href="#"
-class="whatsapp">
+href="https://wa.me/524331002192?text=Hola,%20quiero%20agendar%20una%20cita%20en%20la%20barber%C3%ADa."
+class="whatsapp-btn"
+target="_blank"
+rel="noopener">
 
-💬 Contactar por WhatsApp
+💬 Agendar cita por WhatsApp
 
 </a>
 
+
+<div class="phone">
+
+📱 433 100 21 92
+
+</div>
 
 </div>
 
@@ -1103,11 +943,10 @@ class="whatsapp">
 <footer>
 
 <p>
-© 2026 Mariscos Mares · Sombrerete, Zacatecas
+© 2026 Barbería. Todos los derechos reservados.
 </p>
 
 </footer>
-
 
 </body>
 </html>
